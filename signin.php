@@ -1,8 +1,12 @@
+<?php 
+	include("signin_user.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Login From Here</title>
+	<title>Login | KothaBarta</title>
 	<link rel="stylesheet" type="text/css" href="css/signin.css">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- Latest compiled and minified CSS -->
@@ -26,12 +30,12 @@
 
 			<div class="form-group">
 				<label>Email:</label>
-				<input type="email" name="email" class="form-control" placeholder="email@gmail.com" required>
+				<input type="email" name="user_email" class="form-control" placeholder="email@gmail.com" required>
 			</div>
 
 			<div class="form-group">
 				<label>Password:</label>
-				<input type="password" name="pass" class="form-control" placeholder="Password...">
+				<input type="password" name="user_pass" class="form-control" placeholder="Password...">
 			</div>
 
 			<!-- recover password -->
@@ -41,7 +45,7 @@
 			<div class="form-group">
 				<button type="submit" style="background: #6e8f77;" class="btn btn-primary btn-block btn-lg" name="sign_in">Sign In</button>
 			</div>
-			<!-- <?php //include("signin_user.php");?> -->
+			<?php include("signin_user.php");?>
 		</form>
 
 		<div class="text-center small" style="color: #67428B;">Don't Have an Account? <a style="color: red;" href="signup.php">Create Your Account</a></div>

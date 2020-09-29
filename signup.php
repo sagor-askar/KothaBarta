@@ -1,3 +1,7 @@
+<?php 
+	include("signup_user.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +21,7 @@
 <body>
 
 	<div class="signup-form">
-		<form action="" method="post">
+		<form action="signup_user.php" method="post">
 			
 			<div class="form-header">
 				<h2>Create New Account</h2>
@@ -31,23 +35,28 @@
 
 			<div class="form-group">
 				<label>Password:</label>
-				<input type="password" name="user_pass" class="form-control" placeholder="Password...">
+				<input type="password" name="user_pass" class="form-control" placeholder="Enter password">
 			</div>
 
 			<div class="form-group">
 				<label>Email Address:</label>
-				<input type="email" name="user_email" class="form-control" placeholder="email@gmail.com" required>
+				<input type="email" name="user_email" class="form-control" placeholder="Example: email@gmail.com" required>
+			</div>
+
+			<div class="form-group">
+				<label>Phone No.:</label>
+				<input type="text" name="user_phone" class="form-control" placeholder="Example: 0123456789" required>
 			</div>
 
 			<div class="form-group">
 				<label>Country:</label>
 				<select class="form-control" name="user_country" required>
 					<option>Select a Country</option>
-					<option>Bangladesh</option>
-					<option>India</option>
-					<option>Pakistan</option>
-					<option>Taiwan</option>
-					<option>Nepal</option>
+					<option value="Bangladesh">Bangladesh</option>
+					<option value="India">India</option>
+					<option value="Pakistan">Pakistan</option>
+					<option value="Taiwan">Taiwan</option>
+					<option value="Nepal">Nepal</option>
 				</select>
 			</div>
 
@@ -55,9 +64,9 @@
 				<label>Gender:</label>
 				<select class="form-control" name="user_gender" required>
 					<option>Select your gender</option>
-					<option>Male</option>
-					<option>Female</option>
-					<option>Others</option>
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+					<option value="Others">Others</option>
 				</select>
 			</div>
 
@@ -70,7 +79,7 @@
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary btn-block btn-lg" name="sign_up" style="background: #6e8f77;">Sign Up</button>
 			</div>
-			<!-- <?php //include("signup_user.php");?> -->
+
 		</form>
 
 		<div class="text-center small" style="color: #67428B;">Already Have an Account? <a style="color: red;" href="signin.php">Sign In</a></div>
